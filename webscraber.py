@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from main import flight
 from bs4 import BeautifulSoup
+import time
 
 
 def scraping(urls: str) -> str:
@@ -70,9 +71,11 @@ def scraping(urls: str) -> str:
         "link": firstUrl
     }
 
+
 # exampless
+timer = time.time()
 myFlight = flight("ankara", "istanbul", "one way", "30.03.2023", False)
 url = myFlight.searchFlight()
 datas = scraping(url)
-
-print(datas['flight price'])
+timer2 = time.time()
+print(datas, timer2 - timer)

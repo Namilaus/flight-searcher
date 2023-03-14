@@ -13,14 +13,15 @@ class flight:
         self.to = to
         self.oneOrRound = oneOrRound
         self.date = dateUmwandeln(date)
-        if returnDate == False:
-            pass
+        if not returnDate or None:
+            self.returnDate = False
         else:
             self.returnDate = dateUmwandeln(returnDate)
 
 
 
     def searchFlight(self) -> str:
+
         # go to google
         options = webdriver.ChromeOptions()
         options.add_experimental_option("detach", True)
@@ -49,9 +50,9 @@ class flight:
             return url
 
         def roundTrip() -> str:
-            if self.returnDate == False:
+            if not self.returnDate:
                 print("please enter a date")
-                return 0
+                exit()
 
             try:
                 url = []
@@ -96,9 +97,3 @@ class flight:
         else:
             return roundTrip()
 
-
-
-
-#myfligth  = flight("ankara","istanbul","round way","30.3.2023","12.4.2023")
-
-#print(myfligth.searchFlight())
