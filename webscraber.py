@@ -70,7 +70,7 @@ def scraping(urls: str) -> str:
         "link": firstUrl
     }
 
-# examples
+# exampless
 myFlight = flight("ankara", "istanbul", "one way", "30.03.2023", False)
 url = myFlight.searchFlight()
 datas = scraping(url)
