@@ -2,6 +2,7 @@ from flask import Flask,request
 from main import flight
 from webscraber import scraping
 
+x = None
 
 app  = Flask(__name__)
 
@@ -21,6 +22,7 @@ def showname(username):
 
 @app.route("/data",methods=['GET','POST'])
 def getData():
+    global x
     if request.method == 'POST':
         print(request.get_json())
         data = request.get_json()
@@ -30,10 +32,13 @@ def getData():
         print(datas)
         return datas
     if request.method == 'GET':
+        x = "312"
         return "hallo man"
     return -1
 
-
+@app.route('/x')
+def xSh():
+    return x
 
 
 
