@@ -1,8 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from main import flight
 from bs4 import BeautifulSoup
-import time
+from time import sleep
 
 
 def scraping(urls: str) -> str:
@@ -24,6 +23,7 @@ def scraping(urls: str) -> str:
     firstUrl = urls[0]
     # scrape data
     driver.get(firstUrl)
+    #sleep(2)
     driver.find_element(By.XPATH,
                         "//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc "
                         "AjY5Oe DuMIQc LQeN7 Nc7WLe']").click()
@@ -67,15 +67,16 @@ def scraping(urls: str) -> str:
             }}
 
     return {
-        "flight price": price,
+        "flight_price": price,
         "link": firstUrl
     }
 
 
-# exampless
-timer = time.time()
-myFlight = flight("ankara", "istanbul", "one way", "30.03.2023", False)
-url = myFlight.searchFlight()
-datas = scraping(url)
-timer2 = time.time()
-print(datas, timer2 - timer)
+# exampless and tests
+
+# timer = time.time()
+# myFlight = flight("ankara", "istanbul", "one way", "30.03.2023", False)
+# url = myFlight.searchFlight()
+# datas = scraping(url)
+# timer2 = time.time()
+# print(datas, timer2 - timer)
