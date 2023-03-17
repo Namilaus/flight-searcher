@@ -14,7 +14,7 @@ def getData():
         datas = scraping(urls)
         return datas
     if request.method == 'GET':
-        return "hallo man"
+        return "hallo man there is nothing here just chill"
     return -1
 
 
