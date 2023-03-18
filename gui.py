@@ -17,7 +17,6 @@ headers = {"Content-Type": "application/json"}
 
 # Send the POST request
 response = requests.post(url, json=data, headers=headers)
-
+x = response.json()
 # Print the response
-print(response.status_code)
-print(response.json())
+print(x['link'])
