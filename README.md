@@ -12,7 +12,7 @@ Flight Searcher is a student project developed to help me gain experience in bui
 
 ## Usage
 - **Use the application via API**:
-- **POST request to /data with JSON body**:
+- **POST** request to /data with JSON body:
 ```Json
 {
   "from": "origin",
@@ -22,9 +22,9 @@ Flight Searcher is a student project developed to help me gain experience in bui
   "returnDate": "return date (if round trip)"
 }
 ```
-- **GET request to /data to check the server status.**
+- **GET** request to /data to check the server status.
 
 ## Technologies
--  Web Scraping: Selenium, BeautifulSoup
--  Backend: Flask
--  Programming Language: Python
+-  **Web Scraping**: Selenium, BeautifulSoup
+-  **Backend**: Flask
+-  **Programming Language**: Python
