@@ -2,7 +2,7 @@
 
 ## Overview
 
-Flight Searcher is a student project developed to help me gain experience in building web applications that fetch and display flight information using Selenium. This project aims to provide a basic yet practical example of web scraping and backend development.
+Flight Searcher is a project developed to help me gain experience in building web applications that fetch and display flight information using Selenium. This project aims to provide a basic yet practical example of web scraping and backend development.
 
 ## Features
 
